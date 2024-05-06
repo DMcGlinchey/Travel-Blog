@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+
+<html lang="en-us">
+
+<HEAD>
+    <!--Head is used to contain key information that will throught the whole page-->
+    <TITLE>Home Page of Daniel McGlinchey</TITLE>
+    <!--This is the title of the page-->
+
+
+    <meta http-equiv="Content-Type"    content="text/html; charset=UTF-8">
+    <meta name="authors" lang="en-us"  content="Daniel McGlinchey">
+    <!-- This where the authors name is documneted-->
+    <meta name="description"  content="This web site is created by Daniel McGlinchey to be used as home page
+    and to provide some description about myself">
+    <!-- This is the description of the site-->
+    <meta name="keywords" lang="en-us"
+          content="The College of New Jersey, Information Systems, Northumbria University, England, Yorkshire,
+          Leeds, Work Placement, management, business">
+    <!-- These are key words that will appear through the site-->
+
+    <link rel="stylesheet" type="text/css" href="css/Home.css">
+
+
+
+</HEAD>
+<BODY>
+<!--The H1 is the text that will appear at the top of the page, h1 is the largest size for the h texts-->
+<header>
+
+    <nav role="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Internship.html">Internship</a></li>
+            <li><a href="TCNJ.html">TCNJ</a></li>
+            <li><a href="Travelled.html">Travelled</a></li>
+            <li><a href="locations.html">Where I'm from</a></li>
+            <li><a href="Feedback.html">Feedback</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)"
+                   class="dropbtn">Project</a>
+                <div class="dropdown-content">
+                    <a href="index1.html">Original Index</a>
+                    <a href="constitution.html">Constitution</a>
+                    <a href="recipe.html">Recipe</a>
+                    <a href="grid.html">Grid</a>
+                </div></li>
+        </ul>
+    </nav>
+
+
+    <img src="image/banner.jpg" alt="valid"/>
+    <!-- Here is the is the image used on the page -->
+    <h1>McGlinchey's Blog</h1>
+    <!-- This is the header at the top of the page -->
+</header>
+
+
+
+<main id="structure">
+
+    <article id="contact-text">
+        <!-- the article is used to store text, images and headers-->
+        <h2>Contact</h2>
+
+        <p>
+            Thank for viewing my site and reading over some of my experience. I hope you were able to explore the site
+            entirely and enjoyed what I have displayed on the site.
+        </p>
+    </article>
+
+    <div class="contact">
+    <form id="Feedback" method="get" action="getscontactinfo.php" onsubmit="return checkform()">
+        <!-- This is used to find the php page-->
+        <fieldset>
+
+            <label>Surname:
+                <input type="text" name="surname" value=""/></label>
+
+            <br>
+
+            <label>Forename:
+                <input type="text" name="forename" value=""/></label>
+
+            <br>
+
+            <label>E-mail-Address:
+                <input type="email" name="from" value=""/></label>
+            <!-- These are labels and text boxes which will be used for the contact page-->
+            <br>
+
+            <label>Question options: <select name="question">
+                <option value="">Please choose a question area</option>
+                <option value="Website">Website</option>
+                <option value="Navigation">Navigation</option>
+                <option value="Information">Informatiom</option>
+                <option value="Other">Other</option>
+            </select>
+                <!-- This will create a drop down menu, to allow you to pick one of the options-->
+            </label>
+
+            <br>
+
+            <label> Did you like the website:</label>
+            <label> Yes:<input type="radio" name="rate" value="y"
+            /></label>
+            <label> No:<input type="radio" name="rate" value="n"
+            /></label>
+            <!-- This will create a radio buttons, allowing you to tick an option-->
+            <br>
+
+
+            <label> Would you like to leave a comment/question?
+                <textarea rows="4" cols="50" name="feedback" placeholder="Please enter a comment"></textarea></label>
+            <!-- This label is just a text box allowing you to put you option in-->
+
+            <br>
+
+            <label><input type="submit" name="submit" value="submit"/></label>
+            <!-- This a button that allows you to comfirm the option and send it-->
+        </fieldset>
+    </form>
+
+
+    <script type="text/javascript">
+        //<![CDATA[
+        function checkform() {
+            "use strict";
+            var theform = document.getElementById('studentinfo');
+            <!-- This confirms the document for php-->
+
+            if (theform.surname.value == "") {
+                alert("Sorry, you need to enter your surname");
+                theform.surname.focus();
+                return false;
+            }
+            <!-- This shows an error message if you fail to but in you surname-->
+            if (theform.forename.value == "") {
+                alert("Sorry, you need to enter your forename");
+                theform.forename.focus();
+                return false;
+            }
+            <!-- This shows an error message if you fail to but in you forename-->
+            if (theform.question.selectedIndex == 0) {
+                alert("you must choose a Question Option");
+                theform.question.focus();
+                return false;
+            }
+
+            return true;
+        }
+        //]]>
+    </script>
+
+</div>
+
+</main>
+
+
+<footer>Created by Daniel McGlinchey
+    <!--the footer contains closing information the conclude the page-->
+
+    <p>
+        <a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Flocalhost%3A63342%2FWeb%2Findex.html#file"><img
+                src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88"></a>
+        <br /></p>
+    <br>
+    <aside id="top">
+        <ul><LI><A HREF="Feedback.html.html">Top</A></ul>
+    </aside>
+</footer>
+</BODY>
+</HTML>
+
